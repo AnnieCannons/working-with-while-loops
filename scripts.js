@@ -47,14 +47,14 @@ console.log(`The sum of even numbers from 2 to 20 is: ${sum}`);
 /****************** Exercise 4 ********************/
 
 
-// Implement a countdown using a while loop
+// // Implement a countdown using a while loop
 
-let countdown = 10
+// let countdown = 10
 
-while (countdown >= 1) {
-    console.log(countdown);
-    countdown--
-}
+// while (countdown <= 1) {
+//     console.log(countdown);
+//     countdown--
+//}
 
 //****************** Exercise 5 ********************/
 
@@ -100,7 +100,7 @@ console.log("Please enter a valid number.");
 
 
 
-/****************** Exercise 6 ********************/
+// /****************** Exercise 6 ********************/
 
 
 // Simulating a vending machine using a while loop
@@ -110,46 +110,77 @@ console.log("Please enter a valid number.");
 let userBalance = 20;
 
 
-// Price of an item in the vending machine
-const itemPrice = 3;
+// // Price of an item in the vending machine
+// const itemPrice = 3;
 
 
-console.log("Welcome to the Vending Machine!");
-console.log(`You have $${userBalance} in your balance.`);
+// console.log("Welcome to the Vending Machine!");
+// console.log(`You have $${userBalance} in your balance.`);
 
 
-while (userBalance >= itemPrice) {
-console.log("Available options:");
-console.log("1. Snack A ($3)");
-console.log("2. Snack B ($2)");
-console.log("3. Exit");
-}
+// while (userBalance >= itemPrice) {
+// console.log("Available options:");
+// console.log("1. Snack A ($3)");
+// console.log("2. Snack B ($2)");
+// console.log("3. Exit");
 
 
-const choice = parseInt(prompt("Enter your choice:"));
+
+// const choice = parseInt(prompt("Enter your choice:"));
 
 
-if (choice === 1) {
-console.log("You selected Snack A. Enjoy your snack!");
-userBalance -= itemPrice;
-} else if (choice === 2) {
-console.log("You selected Snack B. Enjoy your snack!");
-userBalance -= 2;
-} else if (choice === 3){
-console.log("Thank you for using the Vending Machine. Have a great day!");
-userBalance = 0;
-} else {
-console.log("Invalid choice. Please select a valid option.");
-}
-{console.log(`Your current balance: $${userBalance}`);}
+// if (choice === 1) {
+// console.log("You selected Snack A. Enjoy your snack!");
+// userBalance -= itemPrice;
+// } else if (choice === 2) {
+// console.log("You selected Snack B. Enjoy your snack!");
+// userBalance -= 2;
+// } else if (choice === 3){
+// console.log("Thank you for using the Vending Machine. Have a great day!");
+// userBalance = 0;
+// } else {
+// console.log("Invalid choice. Please select a valid option.");
+// }
+// console.log(`Your current balance: $${userBalance}`)
+// };
 
-console.log("Insufficient balance. Please add more money to use the Vending Machine.");
+// console.log("Insufficient balance. Please add more money to use the Vending Machine.")
+// ;
+
 
 
 // 1. Write the condition so that the while loop will eventually stop.
 
-
-
+let userBalance = 20;
+// Price of an item in the vending machine
+const itemPrice = 3;
+console.log("Welcome to the Vending Machine!");
+console.log(`You have $${userBalance} in your balance.`);
+while (userBalance > itemPrice) {
+    console.log("Available options:");
+    console.log("1. Snack A ($3)");
+    console.log("2. Snack B ($2)");
+    console.log("3. Exit");
+    const choice = parseInt(prompt("Enter your choice:"));
+    if (choice === 1) {
+        console.log("You selected Snack A. Enjoy your snack!");
+        userBalance -= itemPrice;
+    } else if (choice === 2) {
+        console.log("You selected Snack B. Enjoy your snack!");
+        userBalance -= 2;
+    } else if (choice === 3){
+        console.log("Thank you for using the Vending Machine. Have a great day!");
+        userBalance = 0;
+        break;
+    } else {
+        console.log("Invalid choice. Please select a valid option.");
+    }
+    console.log(`Your current balance: $${userBalance}`);
+    if (userBalance < itemPrice) {
+        console.log("Insufficient balance. Please add more money to use the Vending Machine.");
+        break;
+}
+}
 
 
 
